@@ -1,1 +1,29 @@
+Explanation of the code
 
+Use of numpy library for program
+Starting with the distance calculation using numpy's
+np.linalg.norm() to calculate the distance of the point
+
+constrain angle function checks if the joint angle is within the given range
+
+
+In fabrik algo code
+
+target: The desired target position that the end effector of the robotic arm should reach.
+joint_positions: The initial positions of the joints of the robotic arm.
+joint_lengths: The lengths of the links between the joints.
+tolerance: The acceptable tolerance for the difference between the final position of the end effector and the target position.
+max_iterations: The maximum number of iterations to perform.
+The algorithm iterates between forward and backward reaching steps until the end effector reaches the target position or the 
+maximum number of iterations is reached.
+In forward reaching step, it updates the joint positions based on the target position.
+In backward reaching step, it adjusts the joint positions to satisfy the link lengths.
+
+user input is stored in form of target_x target_y and target_z
+
+the joint lenghts are 23 15 and 1
+
+the fabrik function is called and processes the result
+
+if the target is reachable then the optimal angles(radians) and joint positions are printed
+if the target is unreachable then "target unreachable" is printed
